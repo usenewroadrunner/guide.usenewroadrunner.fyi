@@ -1,57 +1,55 @@
 # Installation 
 
-Roadrunner 1.0 has two main ways that you can install it, depending on if you have an existing project or not.
+There are two ways to install Road Runner 1.0.
 
-[Method \#1:](link to Method 1) Simply download the Quickstart repo from [it's github repo](https://github.com/acmerobotics/road-runner-quickstart). This is an empty project (almost like you just downloaded the SDK from first), but with the Roadrunner dependencies and tuning files included. All you need to do is open it in Android Studio.
+## Method 1: Downloading the Quickstart (highly recommended)
 
-[Method \#2:](link to Method 2) Manual installation. You can use this to add Roadrunner to your own pre-existing project. In many cases, merging your teamcode with the quickstart is easier, however if you have a complex setup with many external libraries, this may be easier than adding your code to the quickstart. Also, in the case FIRST releases a new SDK version and the Quickstart has not been updated, you can install Roadrunner this way.
+Download the Quickstart repo from [GitHub](https://github.com/acmerobotics/road-runner-quickstart).
+This is a modification of the base FIRST SDK with the Road Runner dependencies and tuning files included.
+If you don't use Git, you can download it as a zip file,
+extract it to somewhere on your system, and open it in Android Studio.
 
-## Method 1: Downloading the Quickstart
+You can also follow the [Cookbook guide](https://cookbook.dairy.foundation/intro_to_programming/intro_to_git.html)
+for using Git to download a project.
+Use this repository link in place of the FIRST SDK:
+https://github.com/acmerobotics/road-runner-quickstart
 
-Download the quickstart guide from [the roadrunner quickstart GitHub repository](https://github.com/acmerobotics/road-runner-quickstart).  Then, open it in and do a Gradle Sync.
 
-If you know how to use git, you can run `git clone https://github.com/acmerobotics/road-runner-quickstart.git`, then open it with Android Studio.
+## Method 2: Installing Road Runner onto an existing FTC project
 
-## Method 2: Installing Roadrunner onto an existing FTC project
+You can use this to add Road Runner to your own pre-existing project.
 
-> [!TIP]  
-> Consider using the Quickstart and copying your code to it.
+Note: it is typically much easier to first download the Quickstart and then copy your existing TeamCode files into it.
 
-> [!WARNING]    
-> Please remove all references to prior versions of Roadrunner and FTC Dashboard from your    
-> Gradle files, as well as any previous Roadrunner utilities from your TeamCode folder.
+This method should only be used in exceptional circumstances,
+such as if you have a complex setup with many external libraries or 
+if FIRST releases a new SDK version and the Road Runner Quickstart has not yet been updated.
 
-Open the `build.gradle` file from your TeamCode module. Add the following to your `Repositories` section.
+> [!WARNING]  
+> Please ensure you have removed all references to prior versions of Road Runner and FTC Dashboard from your  
+> Gradle files, as well as any previous Road Runner utilities from your TeamCode folder.
 
-```java
+First, open the `build.gradle` file inside your TeamCode module and add the following to the `repositories` section:
+
+```groovy
 maven {
      url = 'https://maven.brott.dev/'
 }
 ```
 
-If `Repositories` does not exist, instead add:
 
-```java
-repositories {
-  maven {
-     url = 'https://maven.brott.dev/'
-  ]
-}
-```
+Next, add this snippet to the end of the `dependencies` section:
 
-between the `android` and `dependencies` sections
-
-Also, at the end of the `dependencies` section add:
-
-```java
+```groovy
 implementation "com.acmerobotics.roadrunner:ftc:0.1.13"
 implementation "com.acmerobotics.roadrunner:core:1.0.0"
 implementation "com.acmerobotics.roadrunner:actions:1.0.0"
 implementation "com.acmerobotics.dashboard:dashboard:0.4.16"
 ```
 
-Now, do a Gradle Sync.
+Now, perform a Gradle Sync.
 
-Download all the files from [the Quickstart’s teamcode folder](https://github.com/acmerobotics/road-runner-quickstart/tree/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode) (located at `TeamCode/src/main/java/org/firstinspires/ftc/teamcode` within the quickstart) as well as the `tuning` and `messages` folders. Place them in the same spot within your teamcode folder.	
-
-You're done!
+Next, download a copy of [the Quickstart](https://github.com/acmerobotics/road-runner-quickstart/)
+and copy all the files and folders from the TeamCode folder of the Quickstart into your own project.
+Place them in the same spot within your TeamCode folder.
+After that, you are ready to begin tuning.
