@@ -1,8 +1,8 @@
 # Installation 
 
-Roadrunner 1.0 has two main ways that you can install it, depending on if you have an existing project or not.
+There are two ways to install Road Runner 1.0.
 
-[Method \#1:](link to Method 1) Simply download the Quickstart repo from [it's github repo](https://github.com/acmerobotics/road-runner-quickstart). This is an empty project (almost like you just downloaded the SDK from first), but with the Roadrunner dependencies and tuning files included. All you need to do is open it in Android Studio.
+[Method \#1: (highly recommended)](link to Method 1) Download the Quickstart repo from [GitHub](https://github.com/acmerobotics/road-runner-quickstart). This is a modification of the base FIRST SDK with the Roadrunner dependencies and tuning files included. If you don't use Git you can download it as a zip file, extract it to somewhere on your system, and open it in Android Studio. You can also follow the [Cookbook guide](https://cookbook.dairy.foundation/intro_to_programming/intro_to_git.html) for using Git to download a project by using this repository link in place of the FIRST SDK: https://github.com/acmerobotics/road-runner-quickstart
 
 [Method \#2:](link to Method 2) Manual installation. You can use this to add Roadrunner to your own pre-existing project. In many cases, merging your teamcode with the quickstart is easier, however if you have a complex setup with many external libraries, this may be easier than adding your code to the quickstart. Also, in the case FIRST releases a new SDK version and the Quickstart has not been updated, you can install Roadrunner this way.
 
