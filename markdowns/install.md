@@ -23,7 +23,7 @@ If you know how to use git, you can run `git clone https://github.com/acmeroboti
 
 Open the `build.gradle` file from your TeamCode module. Add the following to your `Repositories` section.
 
-```java
+```groovy
 maven {
      url = 'https://maven.brott.dev/'
 }
@@ -31,11 +31,11 @@ maven {
 
 If `Repositories` does not exist, instead add:
 
-```java
+```groovy
 repositories {
   maven {
-     url = 'https://maven.brott.dev/'
-  ]
+      url = 'https://maven.brott.dev/'
+  }
 }
 ```
 
@@ -43,7 +43,7 @@ between the `android` and `dependencies` sections
 
 Also, at the end of the `dependencies` section add:
 
-```java
+```groovy
 implementation "com.acmerobotics.roadrunner:ftc:0.1.13"
 implementation "com.acmerobotics.roadrunner:core:1.0.0"
 implementation "com.acmerobotics.roadrunner:actions:1.0.0"
